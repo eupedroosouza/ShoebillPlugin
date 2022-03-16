@@ -1,4 +1,3 @@
-build
 *.a
 *.log
 CMakeFiles
