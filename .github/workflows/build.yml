@@ -12,7 +12,7 @@ jobs:
             - name:  Setup Java JDK
               uses: actions/setup-java@v3
               with: 
-                distribuiton: oracle
+                distribution: oracle
                 version: 8
             - name: Make Build Executable
               run: chmod +x ./build
