@@ -1,0 +1,25 @@
+on: [push, pull_request]
+
+jobs:
+    build:
+        strategy:
+            matrix:
+                os: [ubuntu-latest]
+        runs-on: ${{ matrix.os }}
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+            - name:  Setup Java JDK
+              uses: actions/setup-java@v3
+              with: 
+                distribuiton: oracle
+                version: 8
+            - name: Make Build Executable
+              run: chmod +x ./build
+            - name: Build
+              run: ./build
+            - name: Collect Artifacts
+              uses: actions/checkout@v3
+              with:
+                name: Build
+                path: build/src/release/
