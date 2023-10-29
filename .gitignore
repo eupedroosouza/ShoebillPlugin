@@ -7,3 +7,5 @@ CMakeCache.txt
 bin/
 linuxBuild/
 cmake-build-debug/
+vscode/
+build/
