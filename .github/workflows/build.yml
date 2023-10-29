@@ -13,7 +13,7 @@ jobs:
               uses: actions/setup-java@v3
               with: 
                 distribution: oracle
-                version: 8
+                java-version: 8
             - name: Make Build Executable
               run: chmod +x ./build
             - name: Build
