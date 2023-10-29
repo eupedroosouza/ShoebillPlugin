@@ -15,7 +15,11 @@ jobs:
                 distribution: temurin
                 java-version: 8
             - name: Make Build Executable
-              run: chmod +x ./build.sh
+              run: |
+                chmod +x ./build.sh
+                chmod +x ./prepare.sh
+            - name: Prepare
+              run: ./prepare.sh
             - name: Build
               run: ./build.sh
             - name: Collect Artifacts
